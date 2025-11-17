@@ -17,7 +17,8 @@ class Student:
     def is_present(self,present):
         if present:
             self.attendance["attended"]+=1
-        self.attendance["not_attended"]+=1
+        else:
+            self.attendance["not_attended"]+=1
 
     def attendance_percentage(self):
         return str(self.attendance["attended"]/(self.attendance["attended"]+self.attendance["not_attended"])*100)+"%"
